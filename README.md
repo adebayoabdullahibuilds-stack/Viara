@@ -152,7 +152,17 @@ Viara follows modern UX and accessibility best practices, including:
 
 Current Status
 
-This repository currently contains the frontend implementation. Backend services and AI-powered business logic will be integrated in future development phases.
+This repository is in the product and architecture planning stage. The initial implementation has not started; proposed requirements, architecture, data model, API boundaries, UX guidelines, and roadmap are documented below for review.
+
+Project Documents
+
+- [Product Requirements](./docs/PRD.md)
+- [Technical Requirements](./docs/TRD.md)
+- [System Architecture](./docs/SYSTEM_ARCHITECTURE.md)
+- [Database Design](./docs/DATABASE_DESIGN.md)
+- [API Specification](./docs/API_SPECIFICATION.md)
+- [Implementation Plan](./docs/IMPLEMENTATION_PLAN.md)
+- [UI/UX Guidelines](./docs/UI_UX_GUIDELINES.md)
 
 ---
 
