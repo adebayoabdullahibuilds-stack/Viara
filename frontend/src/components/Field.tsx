@@ -11,22 +11,22 @@ function Field({ label, hint, leading, id, className = '', ...props }: FieldProp
 
   return (
     <div className="space-y-2">
-      <label className="block text-sm font-medium text-[#27362d]" htmlFor={fieldId}>
+      <label className="block text-sm font-medium text-viara-primary-text" htmlFor={fieldId}>
         {label}
       </label>
-      <div className="flex min-h-12 items-center gap-3 rounded-xl border border-[#dfe5df] bg-white px-3.5 transition focus-within:border-[#467853] focus-within:ring-4 focus-within:ring-[#467853]/10">
+      <div className="flex min-h-12 items-center gap-3 rounded-xl border border-viara-border bg-viara-surface px-3.5 transition focus-within:border-viara-accent focus-within:ring-4 focus-within:ring-viara-accent/10">
         {leading ? (
-          <span aria-hidden="true" className="shrink-0 text-[#7b887e]">
+          <span aria-hidden="true" className="shrink-0 text-viara-secondary-text">
             {leading}
           </span>
         ) : null}
         <input
-          className={`min-w-0 flex-1 bg-transparent text-sm text-[#202821] outline-none placeholder:text-[#9aa39b] ${className}`}
+          className={`min-w-0 flex-1 bg-transparent text-sm text-viara-primary-text outline-none placeholder:text-viara-secondary-text ${className}`}
           id={fieldId}
           {...props}
         />
       </div>
-      {hint ? <p className="text-xs leading-5 text-[#6d796f]">{hint}</p> : null}
+      {hint ? <p className="text-xs leading-5 text-viara-secondary-text">{hint}</p> : null}
     </div>
   )
 }

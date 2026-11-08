@@ -10,11 +10,11 @@ function Brand({ light = false, to = '/' }: BrandProps) {
     <Link
       aria-label="Viara home"
       className={`inline-flex items-center gap-2.5 font-semibold tracking-[-0.04em] ${
-        light ? 'text-white' : 'text-[#173c2c]'
+        light ? 'text-white' : 'text-viara-accent'
       }`}
       to={to}
     >
-      <span className="grid size-9 place-items-center rounded-xl bg-[#dce9df] text-[#315d41]">
+      <span className="grid size-9 place-items-center rounded-xl bg-viara-lavender text-viara-accent">
         <svg
           aria-hidden="true"
           className="size-5"

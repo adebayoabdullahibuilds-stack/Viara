@@ -75,22 +75,22 @@ function AuthPage({ mode }: AuthPageProps) {
   }
 
   return (
-    <main className="grid min-h-screen bg-[#f8faf7] text-[#202821] lg:grid-cols-[0.9fr_1.1fr]">
+    <main className="grid min-h-screen bg-viara-background text-viara-primary-text lg:grid-cols-[0.9fr_1.1fr]">
       <section className="flex flex-col px-5 py-5 sm:px-8 lg:px-12">
         <div className="mx-auto flex w-full max-w-md items-center justify-between lg:mx-0">
           <Brand />
-          <Link className="inline-flex items-center gap-1.5 text-xs font-medium text-[#647268] hover:text-[#1f5137]" to="/">
+          <Link className="inline-flex items-center gap-1.5 text-xs font-medium text-viara-secondary-text hover:text-viara-accent" to="/">
             <ArrowLeft aria-hidden="true" size={14} /> Home
           </Link>
         </div>
         <div className="mx-auto flex w-full max-w-md flex-1 flex-col justify-center py-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-[#67806b]">
+          <p className="text-xs font-semibold uppercase tracking-[0.15em] text-viara-accent">
             {isRegister ? 'Your next chapter' : 'Welcome back'}
           </p>
-          <h1 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-[#203b2a] sm:text-4xl">
+          <h1 className="mt-3 text-3xl font-semibold tracking-[-0.05em] text-viara-primary-text sm:text-4xl">
             {isRegister ? 'Create your Viara account' : 'Good to see you again.'}
           </h1>
-          <p className="mt-3 text-sm leading-6 text-[#6c796f]">
+          <p className="mt-3 text-sm leading-6 text-viara-secondary-text">
             {isRegister
               ? 'A calmer, clearer way to understand your money starts here.'
               : 'Sign in to pick up where you left off.'}
@@ -147,7 +147,7 @@ function AuthPage({ mode }: AuthPageProps) {
             ) : null}
             <button
               aria-label={showPassword ? 'Hide password' : 'Show password'}
-              className="inline-flex min-h-9 items-center gap-2 rounded-lg text-xs font-medium text-[#5e7162] hover:text-[#1f5137] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#315d41]"
+              className="inline-flex min-h-9 items-center gap-2 rounded-lg text-xs font-medium text-viara-accent hover:text-viara-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-viara-accent"
               onClick={() => setShowPassword((visible) => !visible)}
               type="button"
             >
@@ -160,8 +160,8 @@ function AuthPage({ mode }: AuthPageProps) {
                 aria-live="polite"
                 className={`rounded-xl px-4 py-3 text-sm leading-5 ${
                   messageIsError
-                    ? 'bg-[#fff3f0] text-[#9c392b]'
-                    : 'bg-[#edf5eb] text-[#365e3a]'
+                    ? 'bg-viara-danger-bg text-viara-danger'
+                    : 'bg-viara-success-bg text-viara-success'
                 }`}
                 role={messageIsError ? 'alert' : 'status'}
               >
@@ -179,39 +179,39 @@ function AuthPage({ mode }: AuthPageProps) {
             </PrimaryButton>
           </form>
 
-          <p className="mt-7 text-center text-sm text-[#6d796f]">
+          <p className="mt-7 text-center text-sm text-viara-secondary-text">
             {isRegister ? 'Already have an account?' : 'New to Viara?'}{' '}
             <Link
-              className="font-semibold text-[#315d41] underline decoration-[#adc1ad] underline-offset-4 hover:text-[#1f5137]"
+              className="font-semibold text-viara-accent underline decoration-viara-lavender underline-offset-4 hover:text-viara-accent"
               to={isRegister ? '/login' : '/onboarding'}
             >
               {isRegister ? 'Log in' : 'Create an account'}
             </Link>
           </p>
-          <p className="mt-8 text-center text-xs leading-5 text-[#889289]">
+          <p className="mt-8 text-center text-xs leading-5 text-viara-secondary-text">
             Your password is sent only to the configured Viara API. It is not
             stored by this frontend.
           </p>
         </div>
       </section>
 
-      <aside className="relative hidden overflow-hidden bg-[#173d2b] px-12 py-16 text-white lg:flex lg:flex-col lg:justify-between">
+      <aside className="relative hidden overflow-hidden bg-viara-brand px-12 py-16 text-white lg:flex lg:flex-col lg:justify-between">
         <div className="absolute -right-36 -top-32 size-[34rem] rounded-full border border-white/10" />
         <div className="absolute -right-8 -top-8 size-[26rem] rounded-full border border-white/10" />
-        <div className="absolute -bottom-40 -left-24 size-[34rem] rounded-full bg-[#315d41]/50 blur-3xl" />
+        <div className="absolute -bottom-40 -left-24 size-[34rem] rounded-full bg-viara-accent/50 blur-3xl" />
         <div className="relative">
-          <span className="inline-flex rounded-full border border-white/20 px-3 py-1.5 text-[11px] font-medium text-[#d7e5d7]">
+          <span className="inline-flex rounded-full border border-white/20 px-3 py-1.5 text-[11px] font-medium text-white/85">
             Your financial life, at your pace
           </span>
           <h2 className="mt-8 max-w-lg text-5xl font-medium leading-[1.08] tracking-[-0.06em]">
             Good money habits start with understanding.
           </h2>
-          <p className="mt-5 max-w-md text-sm leading-7 text-[#d0ddd1]">
+          <p className="mt-5 max-w-md text-sm leading-7 text-white/85">
             Viara helps you understand the choices you make with money — with
             practical guidance, not pressure.
           </p>
         </div>
-        <div className="relative flex items-center justify-between gap-4 border-t border-white/15 pt-5 text-xs text-[#c8d8ca]">
+        <div className="relative flex items-center justify-between gap-4 border-t border-white/15 pt-5 text-xs text-white/80">
           <span>See your money. Understand it.</span>
           <span>Made for real life.</span>
         </div>

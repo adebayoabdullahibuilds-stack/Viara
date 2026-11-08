@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+@theme {
+  --color-viara-brand: #25245b;
+  --color-viara-accent: #7165d9;
+  --color-viara-lavender: #e9e6ff;
+  --color-viara-background: #f8f8fc;
+  --color-viara-surface: #ffffff;
+  --color-viara-primary-text: #202033;
+  --color-viara-secondary-text: #77778c;
+  --color-viara-border: #e7e7f0;
+  --color-viara-success: #247a4d;
+  --color-viara-success-bg: #eaf6ee;
+  --color-viara-warning: #946200;
+  --color-viara-warning-bg: #fff6df;
+  --color-viara-danger: #b42318;
+  --color-viara-danger-bg: #fef0ee;
+  --color-viara-info: #7165d9;
+  --color-viara-info-bg: #e9e6ff;
+}
+
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
@@ -8,8 +27,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  color: #202821;
-  background: #f7f8f6;
+  color: var(--color-viara-primary-text);
+  background: var(--color-viara-background);
 }
 
 body {

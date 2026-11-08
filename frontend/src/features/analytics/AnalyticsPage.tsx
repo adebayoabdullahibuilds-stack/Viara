@@ -28,7 +28,7 @@ function AnalyticsPage() {
       <PageHeading
         action={
           <button
-            className="inline-flex min-h-10 items-center gap-2 self-start rounded-xl border border-[#e1e8df] bg-white px-3.5 text-xs font-medium text-[#657268] disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex min-h-10 items-center gap-2 self-start rounded-xl border border-viara-border bg-viara-surface px-3.5 text-xs font-medium text-viara-secondary-text disabled:cursor-not-allowed disabled:opacity-60"
             disabled
             title="Export will be available when analytics data is connected"
             type="button"
@@ -41,9 +41,9 @@ function AnalyticsPage() {
         title="Financial analytics"
       />
 
-      <div className="flex items-start gap-3 rounded-2xl border border-[#dce8da] bg-[#f1f6ef] px-4 py-3.5">
-        <CircleHelp aria-hidden="true" className="mt-0.5 shrink-0 text-[#5b7c5e]" size={17} />
-        <p className="text-xs leading-5 text-[#536957]">
+      <div className="flex items-start gap-3 rounded-2xl border border-viara-border bg-viara-lavender px-4 py-3.5">
+        <CircleHelp aria-hidden="true" className="mt-0.5 shrink-0 text-viara-accent" size={17} />
+        <p className="text-xs leading-5 text-viara-secondary-text">
           <span className="font-semibold">No data is connected.</span> This preview does not show
           account figures, demo transactions, or estimates.
         </p>
@@ -55,8 +55,8 @@ function AnalyticsPage() {
             aria-pressed={selectedPeriod === period}
             className={`min-h-9 rounded-lg px-3 text-xs font-medium transition ${
               selectedPeriod === period
-                ? 'bg-[#e8f0e5] text-[#315d3b]'
-                : 'border border-[#e4e9e2] bg-white text-[#718074] hover:bg-[#f5f7f4]'
+                ? 'bg-viara-lavender text-viara-accent'
+                : 'border border-viara-border bg-viara-surface text-viara-secondary-text hover:bg-viara-background'
             }`}
             key={period}
             onClick={() => setSelectedPeriod(period)}
@@ -69,10 +69,10 @@ function AnalyticsPage() {
 
       <section aria-label="Analytics summaries" className="grid gap-4 lg:grid-cols-2">
         {analyses.map((analysis) => (
-          <article className="rounded-2xl border border-[#e5ebe3] bg-white" key={analysis.title}>
-            <div className="border-b border-[#eef1ed] px-5 py-4">
-              <h2 className="text-sm font-semibold text-[#35473a]">{analysis.title}</h2>
-              <p className="mt-1 text-[11px] leading-5 text-[#849087]">{analysis.description}</p>
+          <article className="rounded-2xl border border-viara-border bg-viara-surface" key={analysis.title}>
+            <div className="border-b border-viara-border px-5 py-4">
+              <h2 className="text-sm font-semibold text-viara-primary-text">{analysis.title}</h2>
+              <p className="mt-1 text-[11px] leading-5 text-viara-secondary-text">{analysis.description}</p>
             </div>
             <EmptyState
               description="Add and connect your own records to see this analysis. No values are estimated."
