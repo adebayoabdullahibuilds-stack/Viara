@@ -152,7 +152,7 @@ Viara follows modern UX and accessibility best practices, including:
 
 Current Status
 
-This repository is in the product and architecture planning stage. The initial implementation has not started; proposed requirements, architecture, data model, API boundaries, UX guidelines, and roadmap are documented below for review.
+The repository contains the initial frontend and backend project foundations. Product features have not been implemented; proposed requirements, architecture, data model, API boundaries, UX guidelines, and roadmap are documented below.
 
 Project Documents
 
@@ -163,6 +163,47 @@ Project Documents
 - [API Specification](./docs/API_SPECIFICATION.md)
 - [Implementation Plan](./docs/IMPLEMENTATION_PLAN.md)
 - [UI/UX Guidelines](./docs/UI_UX_GUIDELINES.md)
+
+---
+
+Development Setup
+
+The monorepo keeps the Vite frontend and Django API independent. The frontend is in `frontend/`; the backend and its Python virtual environment are in `backend/`. Project requirements are documented in `docs/`.
+
+### Prerequisites
+
+- Node.js 20.19+ or 22.12+ and npm.
+- Python 3.12.
+- PostgreSQL for database-backed development. PostgreSQL is not bundled with this repository.
+
+### Frontend
+
+```powershell
+cd frontend
+npm.cmd install
+Copy-Item .env.example .env
+npm.cmd run dev
+```
+
+Vite prints the local URL when the development server starts. `VITE_API_BASE_URL` points to the Django API; this foundation does not yet make API requests.
+
+### Backend
+
+Install PostgreSQL and create a local database and database user. Copy `backend/.env.example` to `backend/.env`, then set a unique `DJANGO_SECRET_KEY` and the PostgreSQL database name, user, password, host, and port for your local installation. Do not commit `.env` files.
+
+From the repository root, create and activate a virtual environment and install the pinned dependencies:
+
+```powershell
+cd backend
+py -3.12 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python manage.py runserver
+```
+
+If the Python launcher is unavailable, use `python -m venv .venv` with Python 3.12 on `PATH`. The health endpoint is `http://127.0.0.1:8000/api/v1/health/`; it checks that the API process responds and does not assert PostgreSQL connectivity.
+
+The current backend foundation configures PostgreSQL from environment variables. Database creation, migrations for Viara business models, and database readiness checks are not part of this phase.
 
 ---
 
