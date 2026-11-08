@@ -154,6 +154,8 @@ Current Status
 
 The repository contains the initial frontend and backend project foundations. Product features have not been implemented; proposed requirements, architecture, data model, API boundaries, UX guidelines, and roadmap are documented below.
 
+The frontend now includes the public landing page, an in-memory onboarding flow, login and registration forms wired to the planned API routes, and an explicitly unauthenticated dashboard/analytics preview with no financial data. The backend does not yet implement those authentication or financial API routes; form submissions report that the service is unavailable rather than simulating success.
+
 Project Documents
 
 - [Product Requirements](./docs/PRD.md)
